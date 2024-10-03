@@ -6,3 +6,43 @@
     height: 100vh;
     margin: 0 auto;
 }
+
+.navBar {
+    overflow: hidden;
+    background-color: #9bc1e6;
+}
+
+img {
+    float: right;
+    display: block;
+    padding: 14px 16px;
+}
+
+img:hover {
+    background-color: hsl(0, 0, 0);
+}
+
+.navBar .searchContainer {
+    float: left;
+}
+
+button {
+    float: right;
+}
+
+.navBar .searchContainer button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.navBar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
