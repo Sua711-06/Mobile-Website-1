@@ -13,7 +13,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 nav {
@@ -39,6 +38,7 @@ nav {
 
 #search {
     display: flex;
+    width: 50%;
     gap: 0.5rem;
 }
 
@@ -47,6 +47,7 @@ nav {
     border: none;
     border-radius: 4px;
     height: 36px;
+    width: 75%;
 }
 
 #search button {
@@ -69,6 +70,7 @@ nav {
 }
 
 .nav-buttons button {
+    width: 25%;
     background-color: #555;
     color: white;
     border: none;
@@ -78,20 +80,22 @@ nav {
 }
 
 .carousel {
-    margin: 20px;
-    background-color: #ccc;
+    min-height: 300px;
+    min-width: 360px;
+    height: 300px;
+    margin: 15px;
     text-align: center;
-    position: relative;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 100%;
-    height: 200px;
+    width: auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .carousel img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     display: none;
 }
 
@@ -99,28 +103,40 @@ nav {
     display: block;
 }
 
-.carousel .nav {
+.carousel button {
+    border-radius: 5px;
+    padding: 10px;
+    height: 3rem;
+    font-size: 120%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    background-color: hsla(0, 0%, 80%, 0.5);
+    border: 1px solid rgb(141, 141, 141);
     cursor: pointer;
 }
 
-.carousel .prev {
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    filter: brightness(0.8);
+}
+
+.prev {
     left: 10px;
 }
 
-.carousel .next {
+.next {
     right: 10px;
 }
 
-.section {
-    padding: 2rem;
+.info {
+    background-color: aqua;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+
+.about {
+    background-color: beige;
 }
