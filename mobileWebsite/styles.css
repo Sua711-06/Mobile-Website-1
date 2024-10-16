@@ -1,3 +1,4 @@
+/* _____general_____ */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,76 +14,115 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+    background-color: #c2d9ef;
 }
 
-nav {
-    border-radius: 15px 15px 0 0;
-    background-color: #333;
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+p, ul {
+    margin: 0;
+    font-size: 24px;
+}
+
+.clickable:hover, button:hover {
+    filter: brightness(1.2);
+}
+
+.clickable:active, button:active {
+    filter: brightness(0.8);
+}
+
+.clickable, button {
+    user-select: none;
+}
+/* ^^^^^general^^^^^ */
+
+
+/* _____nav bar_____ */
+.navBar {
+    flex: 0 1 60px;
+    background-color: #9bc1e6;
     color: white;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: stretch;
 }
 
-.nav-top {
+.navTop {
+    flex: 1 1 auto;
     display: flex;
+    flex-flow: row;
     justify-content: space-between;
     align-items: center;
 }
 
-#logo img {
+.logo img{
     cursor: pointer;
-    height: 52px;
+    max-height: 52px;
 }
 
-#search {
+.search {
+    flex: 1 1 auto;
     display: flex;
     width: 50%;
     gap: 0.5rem;
 }
 
-#search input {
+.search input {
     padding: 0.5rem;
     border: none;
     border-radius: 4px;
     height: 36px;
     width: 75%;
+    font-size: 24px;
 }
 
-#search button {
-    padding: 1rem;
+.search button {
+    padding-right: 1rem;
+    padding-left: 1rem;
     border: none;
     border-radius: 4px;
-    height: 52px;
-    background-color: #555;
+    background-color: #387eb6;
     color: white;
     cursor: pointer;
     flex-shrink: 0;
+    font-size: 24px;
 }
 
-.nav-buttons {
+.navButtons {
+    flex: 1 1 auto;
     display: flex;
+    flex-flow: row;
     gap: 0.5rem;
-    width: 100%;
     justify-content: space-around;
     margin-top: 1rem;
 }
 
-.nav-buttons button {
-    width: 25%;
-    background-color: #555;
+.navButtons button {
+    flex: 1 1 auto;
+    background-color: #387eb6;
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
     cursor: pointer;
+    font-size: 24px;
+    padding: 12px;
 }
+/* ^^^^^nav bar^^^^^ */
 
+
+/* _____carousel_____ */
 .carousel {
-    min-height: 300px;
-    min-width: 360px;
-    height: 300px;
+    flex: 0 0 300px;
     margin: 15px;
     text-align: center;
     width: auto;
@@ -95,11 +135,7 @@ nav {
 .carousel img {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    display: none;
-}
-
-.carousel img.active {
+    border-radius: 15px;
     display: block;
 }
 
@@ -116,14 +152,6 @@ nav {
     cursor: pointer;
 }
 
-button:hover {
-    filter: brightness(1.2);
-}
-
-button:active {
-    filter: brightness(0.8);
-}
-
 .prev {
     left: 10px;
 }
@@ -131,12 +159,81 @@ button:active {
 .next {
     right: 10px;
 }
+/* ^^^^^carousel^^^^^ */
 
+
+/* _____info_____ */
 .info {
-    background-color: aqua;
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row;
 }
 
+.section {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #e9f1f9;
+    border: 10px solid #636669;
+}
 
 .about {
-    background-color: beige;
+    flex: 2 1 auto;
+    margin-right: 0;
 }
+
+.contact {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.contactInfo {
+    flex: 1 1 auto;
+}
+
+.resume {
+    background-color: #ade2a0;
+    border: 10px solid #3f6835;
+    flex: 0 1 auto;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.resume img {
+    display: block;
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+    margin-top: 15px;
+}
+/* ^^^^^info^^^^^ */
+
+
+/* _____spacing_____*/
+.spacing {
+    flex: 1 1 auto;
+}
+/* ^^^^^spacing^^^^^ */
+
+
+/* _____footer_____ */
+.footer {
+    flex: 0 1 auto;
+    background-color: #9bc1e6;
+    font-size: 24px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.footer ul {
+    flex: 1 1 auto;
+    width: 80%;
+}
+
+.footer img {
+    height: 90px
+}
+/* ^^^^^footer^^^^^ */

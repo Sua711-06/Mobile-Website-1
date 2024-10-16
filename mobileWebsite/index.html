@@ -1,49 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>My website</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
     </head>
     <body>
         <div id="container">
-            <nav>
-                <div class="nav-top">
-                    <div id="search">
+            <div class="navBar">
+                <div class="navTop">
+                    <div class="search">
                         <input type="text" placeholder="Search...">
-                        <button type="button">Go</button>
+                        <button onclick='alert("The search bar doesnt work :/")' id="goButton" type="button">Go</button>
                     </div>
-                    <div id="logo"><img src="placeholderLogo1.png" alt="Menu"></div>
+                    <div class="logo clickable"><img src="Assets/placeholderLogo1.png" alt="Menu"></div>
                 </div>
-                <div class="nav-buttons">
-                    <button type="button">Button 1</button>
-                    <button type="button">Button 2</button>
-                    <button type="button">Button 3</button>
-                    <button type="button">Button 4</button>
+                <div class="navButtons">
+                    <button type="button">Useless Button 1</button>
+                    <button type="button">Useless Button 2</button>
+                    <button type="button">Useless Button 3</button>
+                    <button type="button">Useless Button 4</button>
                 </div>
-            </nav>
+            </div>
             <div class="carousel">
-                <button class="prev">&#10094;</button>
-                <img src="placeholder.png" alt="Carousel Image 1" class="active">
-                <img src="placeholder.png" alt="Carousel Image 2">
-                <img src="placeholder.png" alt="Carousel Image 3">
-                <button class="next">&#10095;</button>
+                <button id="prev" class="prev">&#10094;</button>
+                <img id="carouselImg" src="https://media.istockphoto.com/id/1169550733/photo/soldering-a-micro-chip-processor-with-iron-tool-green-circuit-boad-electroncs-service.jpg?s=612x612&w=0&k=20&c=Yyb-dgGztw9oK6P1lqF7QEpp7GVgnD7B3Ln-cDlLtak=" alt="Carousel Image">
+                <button id="next" class="next">&#10095;</button>
             </div>
-
             <div class="info">
-                <div class="about">
-                    <h2>About me</h2>
+                <div class="about section">
+                    <h1>About me</h1>
+                    <p>My skills:</p>
+                    <ul>
+                        <li>Electronics</li>
+                        <li>Music</li>
+                        <li>Leather</li>
+                        <li>Coding</li>
+                    </ul>
                 </div>
-
+                <div class="contact">
+                    <div class="contactInfo section">
+                        <h1>Contact me</h1>
+                        <ul>
+                            <li>Phone number: (902)943-4412</li>
+                            <li>Email: Suatrussell@gmail.com</li>
+                            <li>Just straight up don't</li>
+                        </ul>
+                    </div>
+                    <a href="Assets/Suat-Russell.pdf" download="Suat-Russell.pdf"> 
+                        <div class="resume section clickable">
+                            <h1>Download my resume</h1>
+                            <img src="Assets/DlButton.png" alt="Download">
+                        </div>
+                    </a>
+                </div>
             </div>
-            <!--
-            <footer>
-                <div>Footer Text</div>
-                <div>Footer Logo</div>
-            </footer>-->
+            <div class="yapping section">
+                <h1>More info</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+            <div class="spacing"></div>
+            <div class="footer">
+                <ul>
+                    <li><a href="https://www.bestlawyers.com/canada/nova-scotia/halifax">Legal</a></li>
+                    <li><a href="https://moz.com/top500">More pages</a></li>
+                    <li><a href="https://www.google.com">Google</a></li>
+                </ul>
+                <img src="Assets/placeholderLogo1.png" alt="Logo">
+            </div>
         </div>
-        <link rel="script" href="scripts.js">
     </body>
 </html>
