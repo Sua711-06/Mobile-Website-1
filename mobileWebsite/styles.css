@@ -3,33 +3,33 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-#container {
-    min-width: 360px;
-    max-width: 640px;
-    border: 2px solid black;
-    border-radius: 15px;
-    height: 100vh;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     overflow: auto;
     background-color: #c2d9ef;
+    min-width: 335px;
+    overflow: auto;
 }
 
-#container::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
 }
 
 h1 {
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-wrap: nowrap;
+}
+
+h2 {
     margin: 0;
     text-align: center;
 }
 
 p, ul {
     margin: 0;
-    font-size: 24px;
+    font-size: 12px;
 }
 
 .clickable:hover, button:hover {
@@ -55,6 +55,7 @@ p, ul {
     display: flex;
     flex-flow: column;
     align-items: stretch;
+    max-width: 100%;
 }
 
 .navTop {
@@ -63,47 +64,34 @@ p, ul {
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 }
 
 .logo img{
     cursor: pointer;
     max-height: 52px;
+    justify-content: right;
 }
 
-.search {
+.logo {
+    justify-content: right;
+}
+
+h1 {
     flex: 1 1 auto;
-    display: flex;
-    width: 50%;
-    gap: 0.5rem;
-}
-
-.search input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 4px;
-    height: 36px;
-    width: 75%;
-    font-size: 24px;
-}
-
-.search button {
-    padding-right: 1rem;
-    padding-left: 1rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #387eb6;
-    color: white;
-    cursor: pointer;
-    flex-shrink: 0;
-    font-size: 24px;
+    width: min-content;
+    padding: 0;
+    margin: 0;
+    font-stretch: condensed;
 }
 
 .navButtons {
+    max-width: 100%;
     flex: 1 1 auto;
     display: flex;
     flex-flow: row;
     gap: 0.5rem;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 1rem;
 }
 
@@ -114,7 +102,7 @@ p, ul {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 12 px;
     padding: 12px;
 }
 /* ^^^^^nav bar^^^^^ */
@@ -122,20 +110,23 @@ p, ul {
 
 /* _____carousel_____ */
 .carousel {
-    flex: 0 0 300px;
-    margin: 15px;
+    flex: 1 0 auto;
     text-align: center;
     width: auto;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     position: relative;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #e9f1f9;
+    border: 10px solid #636669;
+    margin-bottom: 0;
 }
 
 .carousel img {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
     display: block;
 }
 
@@ -164,39 +155,37 @@ p, ul {
 
 /* _____info_____ */
 .info {
-    flex: 0 1 auto;
+    flex: 1 1 100%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    max-width: 100%;
 }
 
 .section {
+    flex: 1 1 auto;
     margin: 15px;
+    margin-bottom: 0;
     padding: 15px;
     border-radius: 15px;
     background-color: #e9f1f9;
     border: 10px solid #636669;
+    max-width: 100%;
 }
 
 .about {
-    flex: 2 1 auto;
-    margin-right: 0;
+    flex: 1 1 auto;
 }
 
 .contact {
     flex: 1 1 auto;
     display: flex;
     flex-flow: column;
-}
-
-.contactInfo {
-    flex: 1 1 auto;
+    max-width: 100%;
 }
 
 .resume {
     background-color: #ade2a0;
     border: 10px solid #3f6835;
-    flex: 0 1 auto;
-    margin-top: 0;
     cursor: pointer;
 }
 
@@ -221,19 +210,16 @@ p, ul {
 .footer {
     flex: 0 1 auto;
     background-color: #9bc1e6;
-    font-size: 24px;
+    font-size: 12 px;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     padding: 15px;
+    margin-top: 15px;
 }
 
 .footer ul {
     flex: 1 1 auto;
     width: 80%;
-}
-
-.footer img {
-    height: 90px
 }
 /* ^^^^^footer^^^^^ */

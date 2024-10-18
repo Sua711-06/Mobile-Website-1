@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    const goButton = document.getElementById("goButton");
+    resize();
+    
     const img = document.getElementById("carouselImg");
     const prev = document.getElementById("prev");
     const next = document.getElementById("next");
@@ -27,7 +28,38 @@ $(document).ready(function () {
         console.log(imageIndex);
         setImage();
     });
+
+    $(window).on("resize", function(){
+        resize();
+    });
+
+    function resize() {
+        var win = $(this);
+        $("h1").css({ fontSize: 0 });
+        while ($("h1").height() < $(".navTop").height()) {
+          $("h1").css({ fontSize: "+=1" });
+        };
+        $("h1").css({ fontSize: "-=1" });
+        $(".footer img").css({ height: 0 });
+        while ($(".footer img").height() < $(".footer ul").height()) {
+          $(".footer img").css({ height: "+=1" });
+        }
+        $(".footer img").css({ height: "-=1" });
+
+        if (win.width() > 500) {
+            $(".info").css("flex-flow", "row");
+            $(".about").css("margin-right", "0");
+            $("p, li, button").css("font-size", "24px");
+            $("h2").css("font-size", "36px");
+        } else {
+            $(".info").css("flex-flow", "column");
+            $(".about").css("margin-right", "15px");
+            $("p, li, button").css("font-size", "12px");
+            $("h2").css("font-size", "18px");
+        };
+    };
+
     function setImage(e) {
         $(img).attr("src", images[imageIndex]);
-    }
+    };
 });
